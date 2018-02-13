@@ -52,22 +52,27 @@ var myPlayList = [
 $( document ).ready(function() {
    $("button").click(function(){
    	displayList();
-   	
+for (var i=0; i < displayList.length; i = i+ i){
+	console.log(displayList[i]);
+}
 });
 
 function displayList(){
+	for (var i=0; i < myPlayList.length; i++) { 
 $("body").append("<p>mySong: " + myPlayList[0].title + "</p>");
 $("body").append("<p>artist: " + myPlayList[0].artist + "</p>");
 $("body").append("<p>mp3URl: " + myPlayList[0].mp3URL + "</p>");
 $("body").append('<img src="http://www.rap-up.com/app/uploads/2018/01/bruno-mars-cardi-b-finesse.jpg"/>');
 }
 
-function displayList(){
+ function displayList(){
 $("body").append("<p>mySong: " + myPlayList[1].title + "</p>");
 $("body").append("<p>artist: " + myPlayList[1].artist + "</p>");
 $("body").append("<p>mp3URl: " + myPlayList[1].mp3URL + "</p>");
 $("body").append('<img src="http://s3.amazonaws.com/hiphopdx-production/2017/12/171222-Cardi-B-Bartier-Cardi-IG-800x600.jpg"/>');
+ }
 }
+
 
 
 function clearList(){
@@ -82,3 +87,4 @@ function addSong(){
   
 }
 });
+//$("#submit").click(function() {
