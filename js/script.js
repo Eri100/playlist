@@ -20,7 +20,7 @@ var mySong = {
 	"title":"Finesse",
 	"artist":"(Remix) Bruno Mars [Feat. Cardi B]",
 	"mp3URL":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"imageURL":"http://www.rap-up.com/app/uploads/2018/01/bruno-mars-cardi-b-finesse.jpg",
+	"imageURL":""
 }
 
 var myPlayList = [
@@ -28,21 +28,40 @@ var myPlayList = [
 	"title":"Finesse",
 	"artist":"(Remix) Bruno Mars [Feat. Cardi B]",
 	"mp3URL":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"imageURL":"http://www.rap-up.com/app/uploads/2018/01/bruno-mars-cardi-b-finesse.jpg",
+	"imageURL":"https://timeincsecure-a.akamaihd.net/rtmp_uds/416418724/201801/678/416418724_5702067035001_5702030617001-vs.jpg?pubId=416418724&videoId=5702030617001",
+},
+	{
+	"title":"Bodak Yellow",
+	"artist":"Cardi B",
+	"mp3URL":"https://www.youtube.com/watch?v=PEGccV-NOm8",
+	"imageURL":"https://hypb.imgix.net/image/2017/09/cardi-b-billboard-hot-100-number-1-1.jpg?q=75&w=800&fit=max&auto=compress%2Cformat",
 	},
 	{
 		"title":"Bartier Cardi",
 		"artist":"Cardi B [Feat. 21 Savage]",
-		"mp3-url":"https://open.spotify.com/track/2udw7RDkldLFIPG9WYdVtT",
-		"image-url":"http://s3.amazonaws.com/hiphopdx-production/2017/12/171222-Cardi-B-Bartier-Cardi-IG-800x600.jpg",
+		"mp3URL":"https://i1.wp.com/www.ookiy.com/wp-content/uploads/2017/12/cardi-bs-bartier-cardi-is-the-only-gift-you-need-this-holiday-season.jpg?fit=1440%2C810&ssl=1",
+		"imageURL":"https://s14.postimg.org/pgmlmzwvl/Cardi-_B-feature.png",
 	},
 	{
-		"title":"Sorry",
-		"artist":"Justin Bieber",
-		"mp3-url":"https://open.spotify.com/track/09CtPGIpYB4BrO8qb1RGsF",
-		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
-	}
+		"title":"Gods Plan",
+		"artist":"Drake",
+		"mp3URL":"https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
+		"imageURL":"https://hypb.imgix.net/image/2018/01/drake-gods-plan-spotify-single-day-streaming-record-000.jpg?q=75&w=800&fit=max&auto=compress%2Cformat",
+	},
+		{
+		"title":"Havana",
+		"artist":"Camila Cabello [Feat.Young Thug]",
+		"mp3URL":"https://www.youtube.com/watch?v=BQ0mxQXmLsk",
+		"imageURL":"https://img.wennermedia.com/article-leads-horizontal/camila-cabello-debut-album-755871a9-3783-475d-9ccf-394686fdb61d.jpg",
+	},
+		{
+		"title":"MotorSport",
+		"artist":"Cardi B",
+		"mp3URL":"https://www.youtube.com/watch?v=BQ0mxQXmLsk",
+		"imageURL":"https://www.fuse.tv/image/5a2ab8a1c33a8e682900002f/560/292/social/mogos-nicki-m-cardi-b-motorsport-video-split.jpg",
+		}
 
+		
 
 ]
 
@@ -50,41 +69,47 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-   $("button").click(function(){
-   	displayList();
-for (var i=0; i < displayList.length; i = i+ i){
-	console.log(displayList[i]);
-}
+	displayList();
+	$("#button").click(function(){
+		
+   		//displayList();
+		//for (var i=0; i < displayList.length; i = i+ i){
+		//	console.log(displayList[i]);
+		//}
+		var mySong = {
+			title: "input",
+			artist: "input",
+			mp3URL: "input",
+			imageURL: "input"
+		};
+		myPlayList.push(mySong);
+		
+	});
 });
 
 function displayList(){
 	for (var i=0; i < myPlayList.length; i++) { 
-$("body").append("<p>mySong: " + myPlayList[0].title + "</p>");
-$("body").append("<p>artist: " + myPlayList[0].artist + "</p>");
-$("body").append("<p>mp3URl: " + myPlayList[0].mp3URL + "</p>");
-$("body").append('<img src="http://www.rap-up.com/app/uploads/2018/01/bruno-mars-cardi-b-finesse.jpg"/>');
+		$(".songs").append("<p> " + myPlayList[i].title + "</p>");
+		$(".songs").append("<p> " + myPlayList[i].artist + "</p>");
+		$(".songs").append("<a href= " + myPlayList[i].mp3URL + ">PlayHere</a>");
+		$(".songs").append("<img src= " + myPlayList[i].imageURL + "/>");
+	}	
 }
 
- function displayList(){
-$("body").append("<p>mySong: " + myPlayList[1].title + "</p>");
-$("body").append("<p>artist: " + myPlayList[1].artist + "</p>");
-$("body").append("<p>mp3URl: " + myPlayList[1].mp3URL + "</p>");
-$("body").append('<img src="http://s3.amazonaws.com/hiphopdx-production/2017/12/171222-Cardi-B-Bartier-Cardi-IG-800x600.jpg"/>');
- }
-}
+
+
 
 
 
 function clearList(){
-  
-  
-  
+	for (var i=0; i< myPlayList.length; i = 0){
+	}
 }
 
 function addSong(){
  
   
-  
 }
-});
+
+
 //$("#submit").click(function() {
